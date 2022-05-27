@@ -1,6 +1,6 @@
 ---
 layout: post
-title : 2. 1장 나머지부분(페이징, @Query, 등등)정리!!
+title : 2. 1장 나머지부분(페이징, @Query, 등등)정리!!!
 subheading: 개인정리용 글입니다. 틀린부분있을수도 있음.
 author: Donghui Lee
 categories: SpringBoot 기본
