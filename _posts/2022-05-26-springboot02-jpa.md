@@ -1,0 +1,138 @@
+---
+layout: post
+title : 2. 1장 나머지부분(페이징, @Query, 등등)정리!!
+subheading: 개인정리용 글입니다. 틀린부분있을수도 있음.
+author: Donghui Lee
+categories: SpringBoot 기본
+
+banner:
+    image: /assets/images/banners/computer.jpg
+    subheading_style: "color: gold"
+tag: [SpringBoot, jpa, 스프링부트 스타트]
+
+---
+> 구멍가게 코딩단의 스타트 스프링부트책을 바탕으로 정리함.  
+
+책 1장의 나머지부분 간단하게 정리해보았음.
+
+## 1. 엔티티, 엔티티 매니저
+1. 엔티티 = DB상에서 데이터로 관리하는 대상  
+상품, 회사, 직원등 **명사** 이면서 업무관 관련된 데이터를 엔티티로 규정  
+=> JPA에서는 Java를 이용해서 엔티티를 관리하기 때문에 엔티티타입의 존재는 클래스가 된다.  
+ex) Jpa에서 **하나의 엔티티 타입을 생성한다** 라는 의미는 **하나의 클래스를 작성한다** 는 의미이다.  
+
+2. 엔티티 매니저 : 말 그대로 여러 앤티티 객체들을 관리하는 역할  
+여기서 관리란 ?? -> Life Cycle이라고 할수있음.  
+엔티티 매니저는 엔티티 객체들을 **영속 컨택스트(Persistence Context)**에 저장 해두고 생사를 관리함  
+* 50페이지 한번 체크할것  
+
+## 2. DataSourse ( p.57 )
+* datasourse란?  
+ㄴ DB와 관계된 커넥션 정보를 담고 있고 빈으로 등록하여 인자로 넘겨줌  
+이 과정을 통해 Spring은 datasourse로 DB와의 연결을 획득  
+
+구성방법은?  
+1. application.properties를 이용
+2. @Bean과 같은 어노테이션 을 이용해서 Java 코드를 통해 필요한 객체를 구성하는 방법
+3. YAML파일사용
+4. XML파일 사용  
+
+=> 1번 3번 사용해봄  
+YAML파일
+```
+spring:
+  datasource: # spring과 DB연결획득을 위한 datasource 설정
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 링크
+    username: 이름
+    password: 비밀번호
+
+  jpa: # jpa 설정
+    hibernate:
+      ddl-auto: update #스키마 생성할때 어떤것을 쓰겟나?
+      naming:
+        physical-strategy: # 테이블 생성할때 어떻게 이름짓게냐? _ 같은
+          org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    generate-ddl: false # DDL 생성 시 데이터벵스 고유의 기능을 사용하는가?
+    show-sql: true # 실행되는 sql을 보여줄것인가? - 개발할때는 키는게 좋다
+    database: mysql # DB는 무엇을 사용하는가?
+
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #mysql 상세 지정 / mysql도 버젼어러게있는게 5버젼을 쓰겟다
+
+
+
+
+server:
+  port: '8080'
+
+logging:
+  level:
+    org:
+      hibernate: info
+```
+
+결론 : 연결설정을 할때 쓴다.  
+
+## 3. 엔티티 클래스 설계
+설계 방법은 총 2가지  
+1. 직접 sql을 이용해서 테이블을 먼저생성하고 엔티티클래스를 만든다.  
+2. Jpa를 이용해서 설계해서 자동으로 테이블 생성하게한다. => 주로 쓸듯  
+
+설계순서  
+1. 엔티티 클래스 설계  
+ㄴ domain폴더 만들어서 엔티티클래스 생성  
+```java
+@Getter
+@Setter
+@ToString
+
+public class Board {
+   
+    private Long bno;
+
+    private String title;
+    private String writer;
+    private String content;
+
+    private LocalDateTime regDate;
+    private LocalDateTime updateDate;
+}
+```  
+위와 같이 필드 중심으로 일단 간단히 설계함  
+
+2. JPA를 위한 어노테이션 추가  
+```java
+@Getter
+@Setter
+@ToString
+@EntityListeners(AuditingEntityListener.class)
+@Entity
+@Table(name = "tbl_board")
+public class Board {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long bno;
+
+    private String title;
+    private String writer;
+    private String content;
+
+    @CreatedDate
+    private LocalDateTime regDate;
+    @LastModifiedDate // 수정일
+    private LocalDateTime updateDate;
+}
+```  
+여러 어노테이션 추가된것을 확인할수있음. 간단히 어노테이션에 대해 설명하면  
+1. @Id : 각 엔티티를 구별하게하는 식별Id  
+2. @Column : 말 그대로 칼럼인 것을 표시해주기위해 사용하고 여러 옵션을 달수있음  
+여러개 있는데 nullable, length가 대표적임.  
+사용법은  
+```java
+@Column(name = "MEMBER_NAME")
+private String name;
+```  
+이런식임.  
+3. @Table : 테이블 이름 등등 설정할때 사용.  
+4. @Entity : 해당클래스의 인스턴스들이 엔티티임을 명시 => 꼭써야함

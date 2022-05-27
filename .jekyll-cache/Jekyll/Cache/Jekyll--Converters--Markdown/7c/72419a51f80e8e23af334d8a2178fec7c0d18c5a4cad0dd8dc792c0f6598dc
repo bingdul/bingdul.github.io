@@ -1,0 +1,142 @@
+I"<blockquote>
+  <p>구멍가게 코딩단의 스타트 스프링부트책을 바탕으로 정리함.</p>
+</blockquote>
+
+<p>책 1장의 나머지부분 간단하게 정리해보았음.</p>
+
+<h2 id="1-엔티티-엔티티-매니저">1. 엔티티, 엔티티 매니저</h2>
+<ol>
+  <li>
+    <p>엔티티 = DB상에서 데이터로 관리하는 대상<br />
+상품, 회사, 직원등 <strong>명사</strong> 이면서 업무관 관련된 데이터를 엔티티로 규정<br />
+=&gt; JPA에서는 Java를 이용해서 엔티티를 관리하기 때문에 엔티티타입의 존재는 클래스가 된다.<br />
+ex) Jpa에서 <strong>하나의 엔티티 타입을 생성한다</strong> 라는 의미는 <strong>하나의 클래스를 작성한다</strong> 는 의미이다.</p>
+  </li>
+  <li>
+    <p>엔티티 매니저 : 말 그대로 여러 앤티티 객체들을 관리하는 역할<br />
+여기서 관리란 ?? -&gt; Life Cycle이라고 할수있음.<br />
+엔티티 매니저는 엔티티 객체들을 <strong>영속 컨택스트(Persistence Context)</strong>에 저장 해두고 생사를 관리함</p>
+    <ul>
+      <li>50페이지 한번 체크할것</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="2-datasourse--p57-">2. DataSourse ( p.57 )</h2>
+<ul>
+  <li>datasourse란?<br />
+ㄴ DB와 관계된 커넥션 정보를 담고 있고 빈으로 등록하여 인자로 넘겨줌<br />
+이 과정을 통해 Spring은 datasourse로 DB와의 연결을 획득</li>
+</ul>
+
+<p>구성방법은?</p>
+<ol>
+  <li>application.properties를 이용</li>
+  <li>@Bean과 같은 어노테이션 을 이용해서 Java 코드를 통해 필요한 객체를 구성하는 방법</li>
+  <li>YAML파일사용</li>
+  <li>XML파일 사용</li>
+</ol>
+
+<p>=&gt; 1번 3번 사용해봄<br />
+YAML파일</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
+  datasource: # spring과 DB연결획득을 위한 datasource 설정
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 링크
+    username: 이름
+    password: 비밀번호
+
+  jpa: # jpa 설정
+    hibernate:
+      ddl-auto: update #스키마 생성할때 어떤것을 쓰겟나?
+      naming:
+        physical-strategy: # 테이블 생성할때 어떻게 이름짓게냐? _ 같은
+          org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    generate-ddl: false # DDL 생성 시 데이터벵스 고유의 기능을 사용하는가?
+    show-sql: true # 실행되는 sql을 보여줄것인가? - 개발할때는 키는게 좋다
+    database: mysql # DB는 무엇을 사용하는가?
+
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #mysql 상세 지정 / mysql도 버젼어러게있는게 5버젼을 쓰겟다
+
+
+
+
+server:
+  port: '8080'
+
+logging:
+  level:
+    org:
+      hibernate: info
+</code></pre></div></div>
+
+<p>결론 : 연결설정을 할때 쓴다.</p>
+
+<h2 id="3-엔티티-클래스-설계">3. 엔티티 클래스 설계</h2>
+<p>설계 방법은 총 2가지</p>
+<ol>
+  <li>직접 sql을 이용해서 테이블을 먼저생성하고 엔티티클래스를 만든다.</li>
+  <li>Jpa를 이용해서 설계해서 자동으로 테이블 생성하게한다. =&gt; 주로 쓸듯</li>
+</ol>
+
+<p>설계순서</p>
+<ol>
+  <li>엔티티 클래스 설계<br />
+ㄴ domain폴더 만들어서 엔티티클래스 생성<br />
+```java
+@Getter
+@Setter
+@ToString</li>
+</ol>
+
+<p>public class Board {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private Long bno;
+
+private String title;
+private String writer;
+private String content;
+
+private LocalDateTime regDate;
+private LocalDateTime updateDate; } ```   위와 같이 필드 중심으로 일단 간단히 설계함  
+</code></pre></div></div>
+
+<ol>
+  <li>JPA를 위한 어노테이션 추가
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Getter</span>
+<span class="nd">@Setter</span>
+<span class="nd">@ToString</span>
+<span class="nd">@EntityListeners</span><span class="o">(</span><span class="nc">AuditingEntityListener</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"tbl_board"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Board</span> <span class="o">{</span>
+ <span class="nd">@Id</span>
+ <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
+ <span class="kd">private</span> <span class="nc">Long</span> <span class="n">bno</span><span class="o">;</span>
+
+ <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+ <span class="kd">private</span> <span class="nc">String</span> <span class="n">writer</span><span class="o">;</span>
+ <span class="kd">private</span> <span class="nc">String</span> <span class="n">content</span><span class="o">;</span>
+
+ <span class="nd">@CreatedDate</span>
+ <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">regDate</span><span class="o">;</span>
+ <span class="nd">@LastModifiedDate</span> <span class="c1">// 수정일</span>
+ <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">updateDate</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+    <p>여러 어노테이션 추가된것을 확인할수있음. 간단히 어노테이션에 대해 설명하면</p>
+  </li>
+  <li>@Id : 각 엔티티를 구별하게하는 식별Id</li>
+  <li>@Column : 말 그대로 칼럼인 것을 표시해주기위해 사용하고 여러 옵션을 달수있음<br />
+여러개 있는데 nullable, length가 대표적임.<br />
+사용법은
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"MEMBER_NAME"</span><span class="o">)</span>
+<span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+</code></pre></div>    </div>
+    <p>이런식임.</p>
+  </li>
+  <li>@Table : 테이블 이름 등등 설정할때 사용.</li>
+  <li>@Entity : 해당클래스의 인스턴스들이 엔티티임을 명시 =&gt; 꼭써야함</li>
+</ol>
+:ET

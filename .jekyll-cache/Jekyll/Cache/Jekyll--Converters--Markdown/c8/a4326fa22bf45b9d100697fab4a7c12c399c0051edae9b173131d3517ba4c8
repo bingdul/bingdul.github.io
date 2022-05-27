@@ -1,0 +1,135 @@
+I"�<blockquote>
+  <p>구멍가게 코딩단의 스타트 스프링부트책을 바탕으로 정리함.</p>
+</blockquote>
+
+<p>처음 스프링부트에 입문하여 책을 이리저리 보다보니 <code class="language-plaintext highlighter-rouge">JDBC</code>, <code class="language-plaintext highlighter-rouge">SQL mapper</code>, <code class="language-plaintext highlighter-rouge">ORM</code>, <code class="language-plaintext highlighter-rouge">JPA</code>, <code class="language-plaintext highlighter-rouge">Hibernate</code>등등 여러 용어가 나와서 상당히 했갈려해서 다음과 같이 정리하였다.</p>
+
+<h2 id="1-개념정리">1. 개념정리</h2>
+<p>일단 먼저 개념을 알아보면</p>
+
+<p>JDBC(Java Database Connectivity)</p>
+<ul>
+  <li>자바에서 데이터베이스에 접속할 수 있도록 하는 자바 <strong>API</strong>이다</li>
+</ul>
+
+<p>ORM(Object-relational mapping)</p>
+<ul>
+  <li>객체와 관계형 데이터베이스의 데이터를 자동으로 매핑(연결)해주는 것 추상화된 <strong>개념</strong>일뿐</li>
+</ul>
+
+<p>SQL Mapper</p>
+<ul>
+  <li>Object와 SQL의 필드을 매핑하여 데이터를 객체화하는 <strong>기술</strong></li>
+</ul>
+
+<p>JPA(Java Persistence API)</p>
+<ul>
+  <li>Java 관련 기술 스펙의 하나이며 데이터를 관리,유지하는 기법을 하나의 스펙으로 정리한 <strong>인터페이스 표준</strong></li>
+</ul>
+
+<p>Hibernate</p>
+<ul>
+  <li>JPA의 <strong>구현체</strong></li>
+</ul>
+
+<p>Spring data Api</p>
+<ul>
+  <li>spring framework에서 JPA를 편리하게 사용할 수 있도록 지원하는 프로젝트</li>
+</ul>
+
+<blockquote>
+  <p>Api : API는 Application Programming Interface(애플리케이션 프로그램 인터페이스)의 줄임말</p>
+</blockquote>
+
+<h2 id="2-sql-mapper">2. SQL Mapper</h2>
+<p>**<정의>**</정의></p>
+<ul>
+  <li>Object와 SQL의 필드을 매핑하여 데이터를 객체화하는 기술.</li>
+  <li>객체와 테이블간의 관계를 매핑하는 것이 아니라, SQL문을 직접 작성하고 쿼리 수행결과를 어떠한 객체에 매핑하여 줄 지 바인딩하는 방법. 즉 SQL <strong>의존적인</strong> 방법이다.</li>
+</ul>
+
+<dl>
+  <dt>ex) JdbcTemplate, Mybatis</dt>
+  <dt> </dt>
+  <dt>o MyBatis</dt>
+  <dd>SQL을 xml파일로 분리하여 관리하고, SQL결과와 객체 인스턴스의 매핑을 도와주는 역할을 수행.<br />
+동적쿼리를 지원하여 다이나믹하게 변경되는 쿼리 작성가능.<br />
+ </dd>
+</dl>
+
+<p>–&gt; SQL을 개발자가 직접 작성하는 문제.<br />
+–&gt; DBMS에 종속적인 문제.<br />
+–&gt; 비슷한 쿼리를 반복적으로 작성해야하는 문제<br />
+–&gt; 객체와 관계형 테이블 구조간 패러다임 불일치 발생.</p>
+
+<h2 id="3-orm">3. ORM</h2>
+<p>**<정의>**</정의></p>
+<ul>
+  <li>Object와 DB테이블을 매핑하여 데이터를 객체화하는 기술.</li>
+  <li>CRUD 관련 메소드를 사용하면 자동으로 SQL이 만들어져 개발자가 반복적인 SQL을 직접 작성하지 않아도 되고, DBMS에 종속적이지 않다.</li>
+  <li>또한 복잡한 쿼리의 경우 JPQL을 사용하거나 SQL Mapper를 혼용하여 사용할 수 있다.</li>
+  <li>Java ORM 기술에 대한 인터페이스 표준을 <strong>JPA</strong>라고 하고, 이를 구현한 가장 대표적인 기술이 <strong>Hibernate</strong>이다.</li>
+</ul>
+
+<p>ex) Hibernate, EclipseLink, DataNucleus</p>
+
+<p>–&gt; DBMS에 의존하지 않음으로써 도메인과 비즈니스 로직 설계에 더 집중할 수 있는 장점<br />
+–&gt; 요구사항 변화에 빠른 대처 가능한 장점<br />
+–&gt; 복잡한 통계성 쿼리보다는 실시간 처리용 쿼리에 적합</p>
+
+<h3 id="3-1-spring-data-jparepository">3-1. Spring Data Jpa(Repository)</h3>
+<p>spring framework에서 JPA를 편리하게 사용할 수 있도록 지원하는 프로젝트</p>
+<ul>
+  <li>CRUD 처리를 위한 공통 인터페이스 제공</li>
+  <li>repository 개발 시 인터페이스만 작성하면 실행 시점에 스프링 데이터 JPA가 구현 객체를 동적으로 생성해서 주입</li>
+  <li>데이터 접근 계층을 개발할 때 구현 클래스 없이 인터페이스만 작성해도 개발을 완료할 수 있도록 지원</li>
+  <li>공통 메소드는 스프링 데이터 JPA가 제공하는 org.springframework.date.jpa.repository.JpaRepository 인터페이스에
+  count, delete, deleteAll, deleteAll, deleteById, existsById, findById, save ..</li>
+</ul>
+
+<p>&lt; 참고그림 &gt;
+ <img src="/assets/images/banners/springboot_Start/springdatajpa.png" alt="image" /></p>
+
+<h2 id="4-결론">4. 결론</h2>
+
+<p>정리하자면</p>
+<ol>
+  <li>데이터의 영속성(persistence)을 위해 Java에서는 JDBC를 지원해 줌.</li>
+  <li>이 JDBC는 DB에 접근해서 SQL을 수행하고 결과값을 다시 dataType으로 매핑시켜주는 작업을 함.<br />
+=&gt; 상당히 귀찮음.</li>
+  <li>근데 매번하기 귀찮으니까 나온 개념이 SQL mapper와 ORM이 있다.<br />
+=&gt; 개발자가 직접 JDBC프로그래밍을 하지않는다!! 둘다 Persistence Framework의 종류이다.</li>
+  <li>SQL mapper와 ORM은 둘다 기술(개념?)일뿐이고 구현체는 대표적으로 SQL mapper에는 Mybatis, JDBC Template가 있고 ORM의 구현체로는 Hibernate, EclipseLink등등이있다.</li>
+  <li>JPA는 어디에 들어가는가? JPA는 java에서 ORM 개념을 구현하기위한 스펙이고 ORM이 일종의 비젼에 불과했다면, JPA는 이를 구현하기위한 상세한 통과기준<br />
+=&gt; ORM(기초 개념) -&gt; JPA(심화 개념) -&gt; Hibernate(구현체!!)</li>
+</ol>
+
+<blockquote>
+  <p>영속성 : 프로그램이 종료되어도 사라지지 않고 어떤 곳에 저장되는 것</p>
+</blockquote>
+
+<h2 id="5-그림정리">5. 그림정리</h2>
+<ul>
+  <li>이미지 새탭으로 열어서 보세요.</li>
+</ul>
+
+<p><img src="/assets/images/banners/springboot_Start/JpaV2.png" alt="image" /></p>
+
+<h2 id="6-출처">6. 출처</h2>
+
+<ul>
+  <li>
+    <p>참고<br />
+https://deveun.tistory.com/entry/SQL-Mapper%EC%99%80-ORM-%EC%B0%A8%EC%9D%B4</p>
+  </li>
+  <li>
+    <p>spring data jpa 참고 블로그<br />
+https://data-make.tistory.com/621</p>
+  </li>
+  <li>
+    <p>jpa vs springdata Jpa
+https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/</p>
+  </li>
+</ul>
+
+:ET
