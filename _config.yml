@@ -134,7 +134,7 @@ yat:
 #   - archives.html
 #   - categories.html
 #   - tags.html
-#   - about.md
+   - Résumé.md
 
 # Page default value
 # defaults:
