@@ -19,7 +19,7 @@ title: Résumé
 ## 2. Introduce
 
 ---
-안녕하십니까. 저는 국립안동대학과 정보통신학과를 졸업하였습니다.  
+안녕하십니까. 저는 국립안동대학교 정보통신학과를 졸업하였습니다.  
 스프링부트를 공부하고 있으며  백엔드 취업을 희망합니다.
 
 ## 3. Skill
@@ -122,7 +122,7 @@ title: Résumé
     * 개발 기간 : 21.08 ~ 21.10
     * 개발 인원 : 3명
     * [Github Link]()
-    * [Blog Link]()
+    * [Blog Link](https://bingdul.github.io/project/2021/10/30/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%B5%9C%EC%A2%85_%EC%A0%9C%EC%B2%A0%EA%B3%B5%EC%A0%95%EB%B3%B4%EC%95%88.html)
    <br>
    <br>
 2. **android push alarm service**
@@ -130,7 +130,7 @@ title: Résumé
     * 개발 기간 : 21.08 ~ 21.08
     * 개발 인원 : 5명
     * [Github Link]()
-    * [Blog Link]()
+    * [Blog Link](https://bingdul.github.io/project/2021/08/29/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_3%EC%B0%A8_%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%ED%91%B8%EC%8B%9C%EC%95%8C%EB%9E%8C%EC%84%9C%EB%B9%84%EC%8A%A4.html)
   <br>
   <br>
 3. **Smart 자판기**  
@@ -138,7 +138,7 @@ title: Résumé
    * 개발 기간 : 21.06 ~ 21.06
    * 개발 인원 : 4명
    * [Github Link]()
-   * [Blog Link]()
+   * [Blog Link](https://bingdul.github.io/project/2021/06/25/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2%EC%B0%A8_Smart%EC%9E%90%ED%8C%90%EA%B8%B0.html)
   <br>
   <br>
 4. **MINI 제철소 ( MES 프로젝트 )**
@@ -146,7 +146,7 @@ title: Résumé
    * 개발 기간 : 21.05 ~ 21.05
    * 개발 인원 : 5명
    * [Github Link]()
-   * [Blog Link]()
+   * [Blog Link](https://bingdul.github.io/project/2021/05/31/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_1%EC%B0%A8_Mini%EC%A0%9C%EC%B2%A0%EC%86%8C.html)
   <br>
   <br>
 5. **에타알리미 (안드로이드 어플 프로젝트)**
@@ -154,7 +154,7 @@ title: Résumé
    * 개발 기간 : 21.01 ~ 21.03
    * 개발 인원 : 3명
    * [Github Link]()
-   * [Blog Link]()
+   * [Blog Link](https://bingdul.github.io/project/2021/03/30/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%97%90%ED%83%80%EC%95%8C%EB%A6%AC%EB%AF%B8.html)
   <br>
   <br>
 6. **VR게임 무궁화꽃이 피었습니다 ( 졸업작품 - VR 게임 제작 )**
@@ -162,7 +162,7 @@ title: Résumé
    * 개발 기간 : 21.03 ~ 21.06
    * 개발 인원 : 4명
    * [Github Link]()
-   * [Blog Link]()
+   * [Blog Link](https://bingdul.github.io/project/2021/06/22/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_vr%EA%B2%8C%EC%9E%84.html)
 
 ## 8. Experience
 
