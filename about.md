@@ -6,7 +6,7 @@ title: Résumé
 ![bingdul](/assets/images/banners/bingdul.jpg)  
 >안녕하세요. 개발자가 되고 싶은 공룡 이동희입니다.
 
-## Contact
+## 1. Contact
 
 ---
 
@@ -14,31 +14,31 @@ title: Résumé
 * Email : hhhh7611@naver.com  / leedh2929@gmail.com
 * phone : 010-5915-2929
 * Github : [https://github.com/bingdul](https://github.com/bingdul)
-* blog : [https://bingdul.github.io/](https://bingdul.github.io/)
+* Blog : [https://bingdul.github.io/](https://bingdul.github.io/)
   
-## Introduce
+## 2. Introduce
 
 ---
 안녕하십니까. 저는 국립안동대학과 정보통신학과를 졸업하였습니다.  
 스프링부트를 공부하고 있으며  백엔드 취업을 희망합니다.
 
-## Skill
+## 3. Skill
 
 ---
 
-* java
+* Java
 * C# (winform)
 * MySQL, MariaDB
 * IDE : IntelliJ, Eclipes, VsCode
 
-## 자격증
+## 4. 자격증
 
 ---
 
 * 정보처리기사(필기) / 한국산업인력공단
 * 1종 보통 운전면허 / 경찰청(운전면허시험관리단)  
   
-## 수상내역
+## 5. 수상내역
 
 ---
 
@@ -52,7 +52,7 @@ title: Résumé
   수상날짜 : 2021.08  
   수상기관 : LINC+ 사업단 / 안동대학교  
 
-## 대외활동 및 교육
+## 6. 대외활동 및 교육
 
 ---
 
@@ -96,7 +96,7 @@ title: Résumé
 
 **2.  4차 산업혁명 분야 및 8대 혁신성장 산업분야 (3주, 105시간)**  
   * 학습 기술
-    * [Java / Python]
+    * [ Java / Python ]
       * Java 객체지향과 웹기술 기초
       * URL 단축과 데이터 크롤링, 이미지 업로드등 다양한 API기술 사용
   <br>
@@ -108,24 +108,24 @@ title: Résumé
   
   **3. IT 역량강화를 위한 JAVA 과정 (2주, 70시간 과정)** 
   * 학습 기술
-    * [Java]
+    * [ Java ]
       * java언어 기초와 전반전인 응용에 대해 배움
       * 간단한 과제로 실력을 향상시킴
 
 
-## 프로젝트
+## 7. 프로젝트
 
 ---
 
-1. 제철 공정 MES 보안시스템
-    * 기술 구현 : Java, C#
+1. **제철 공정 MES 보안시스템**
+    * 기술 구현 : Java, C#, MySQL
     * 개발 기간 : 21.08 ~ 21.10
     * 개발 인원 : 3명
     * [Github Link]()
     * [Blog Link]()
    <br>
    <br>
-2. android push alarm service
+2. **android push alarm service**
     * 기술 구현 : Java
     * 개발 기간 : 21.08 ~ 21.08
     * 개발 인원 : 5명
@@ -133,15 +133,45 @@ title: Résumé
     * [Blog Link]()
   <br>
   <br>
+3. **Smart 자판기**  
+   * 기술 구현 : Java, Python
+   * 개발 기간 : 21.06 ~ 21.06
+   * 개발 인원 : 4명
+   * [Github Link]()
+   * [Blog Link]()
+  <br>
+  <br>
+4. **MINI 제철소 ( MES 프로젝트 )**
+   * 기술 구현 : C#, 오라클
+   * 개발 기간 : 21.05 ~ 21.05
+   * 개발 인원 : 5명
+   * [Github Link]()
+   * [Blog Link]()
+  <br>
+  <br>
+5. **에타알리미 (안드로이드 어플 프로젝트)**
+   * 기술 구현 : Java
+   * 개발 기간 : 21.01 ~ 21.03
+   * 개발 인원 : 3명
+   * [Github Link]()
+   * [Blog Link]()
+  <br>
+  <br>
+6. **VR게임 무궁화꽃이 피었습니다 ( 졸업작품 - VR 게임 제작 )**
+   * 기술 구현 : C# , unity , VR
+   * 개발 기간 : 21.03 ~ 21.06
+   * 개발 인원 : 4명
+   * [Github Link]()
+   * [Blog Link]()
 
-## Experience
+## 8. Experience
 
 ---
 
 * (주)인성정보 인턴 / 20.12 ~ 21.02
   * 경북도청 rfid칩 교체작업
   
-## Education
+## 9. Education
 
 ---
 
@@ -153,3 +183,13 @@ title: Résumé
   <br>
 * Pohang High School
   * 2013.03 ~ 2016.02
+  
+  <br>
+
+## 10. 기타사항
+
+---
+
+* 병역 대상 : 군필
+  * 복무 기간 : 17.07 ~ 19.04
+  * 군별 : 육군 / 병장 만기제대
