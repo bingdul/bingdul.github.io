@@ -121,7 +121,7 @@ title: Résumé
     * 기술 구현 : Java, C#, MySQL
     * 개발 기간 : 21.08 ~ 21.10
     * 개발 인원 : 3명
-    * [Github Link]()
+    * [Github Link](https://github.com/bingdul/Project01_MES-security-System.git)
     * [Blog Link](https://bingdul.github.io/project/2021/10/30/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%B5%9C%EC%A2%85_%EC%A0%9C%EC%B2%A0%EA%B3%B5%EC%A0%95%EB%B3%B4%EC%95%88.html)
    <br>
    <br>
@@ -129,7 +129,7 @@ title: Résumé
     * 기술 구현 : Java
     * 개발 기간 : 21.08 ~ 21.08
     * 개발 인원 : 5명
-    * [Github Link]()
+    * [Github Link](https://github.com/bingdul/Project02_android-push-alarm-service.git)
     * [Blog Link](https://bingdul.github.io/project/2021/08/29/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_3%EC%B0%A8_%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%ED%91%B8%EC%8B%9C%EC%95%8C%EB%9E%8C%EC%84%9C%EB%B9%84%EC%8A%A4.html)
   <br>
   <br>
@@ -137,7 +137,7 @@ title: Résumé
    * 기술 구현 : Java, Python
    * 개발 기간 : 21.06 ~ 21.06
    * 개발 인원 : 4명
-   * [Github Link]()
+   * [Github Link](https://github.com/bingdul/Project03_Smart-vending-machine.git)
    * [Blog Link](https://bingdul.github.io/project/2021/06/25/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2%EC%B0%A8_Smart%EC%9E%90%ED%8C%90%EA%B8%B0.html)
   <br>
   <br>
@@ -145,7 +145,7 @@ title: Résumé
    * 기술 구현 : C#, 오라클
    * 개발 기간 : 21.05 ~ 21.05
    * 개발 인원 : 5명
-   * [Github Link]()
+   * [Github Link](https://github.com/bingdul/Project04_Mini-Ironwork-with-MES-System.git)
    * [Blog Link](https://bingdul.github.io/project/2021/05/31/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_1%EC%B0%A8_Mini%EC%A0%9C%EC%B2%A0%EC%86%8C.html)
   <br>
   <br>
@@ -153,7 +153,7 @@ title: Résumé
    * 기술 구현 : Java
    * 개발 기간 : 21.01 ~ 21.03
    * 개발 인원 : 3명
-   * [Github Link]()
+   * [Github Link](https://github.com/bingdul/Project05_EverytimeCrawler.git)
    * [Blog Link](https://bingdul.github.io/project/2021/03/30/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%97%90%ED%83%80%EC%95%8C%EB%A6%AC%EB%AF%B8.html)
   <br>
   <br>
@@ -161,7 +161,7 @@ title: Résumé
    * 기술 구현 : C# , unity , VR
    * 개발 기간 : 21.03 ~ 21.06
    * 개발 인원 : 4명
-   * [Github Link]()
+   * [Github Link](https://github.com/bingdul/Project06_VR-game-mugunghwa-with-unity)
    * [Blog Link](https://bingdul.github.io/project/2021/06/22/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_vr%EA%B2%8C%EC%9E%84.html)
 
 ## 8. Experience
@@ -169,7 +169,7 @@ title: Résumé
 ---
 
 * (주)인성정보 인턴 / 20.12 ~ 21.02
-  * 경북도청 rfid칩 교체작업
+  * 경북도청 RFID칩 교체작업
   
 ## 9. Education
 
