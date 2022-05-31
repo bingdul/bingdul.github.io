@@ -135,14 +135,16 @@ yat:
 #   - categories.html
 #   - tags.html
 #   - about.md
-
+#---------------------------------------------------------------------------------
+# 메인페이지 전체 설정으로 보임  / _data폴더에 defaults.yml에서 설정가능함
 # Page default value
 # defaults:
 #   home:
 #     heading: "Bingdul Development Blog"
 #     subheading: "이동희 개발일지"
 #     banner: /assets/images/banners/laptop.jpg
-
+#---------------------------------------------------------------------------------
+# 모든 포스트의 베너를 설정할때 쓰는듯함 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
 # config it by the front matter for one specific post
