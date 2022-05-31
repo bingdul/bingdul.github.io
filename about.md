@@ -10,7 +10,7 @@ title: Résumé
 
 ---
 
-<b><img src="/assets/images/banners/bingdul.jpg" width="150"></b>
+<b><img align="left" src="/assets/images/banners/증명사진.jpg" width="150"></b>
  
 
 * name : 이동희 / Donghui Lee
