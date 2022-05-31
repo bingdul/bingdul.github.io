@@ -10,7 +10,7 @@ title: Résumé
 
 ---
 
-<b><img align="left" src="/assets/images/banners/증명사진.jpg" width="150"></b>
+<b><img align="left" src="/assets/images/banners/증명사진.jpg" width="150"></b>  
  
 
 * name : 이동희 / Donghui Lee
@@ -18,7 +18,7 @@ title: Résumé
 * phone : 010-5915-2929
 * Github : [https://github.com/bingdul](https://github.com/bingdul)
 * Blog : [https://bingdul.github.io/](https://bingdul.github.io/)
-  
+
 ## 2. Introduce
 
 ---
