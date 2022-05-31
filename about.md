@@ -30,6 +30,7 @@ title: Résumé
 ---
 
 * Java
+* SpringBoot
 * C# (winform)
 * MySQL, MariaDB
 * IDE : IntelliJ, Eclipes, VsCode
@@ -130,7 +131,7 @@ title: Résumé
    <br>
 2. **android push alarm service**
     * 기술 구현 : Java
-    * 개발 기간 : 21.08 ~ 21.08
+    * 개발 기간 : 21.08
     * 개발 인원 : 5명
     * [Github Link](https://github.com/bingdul/Project02_android-push-alarm-service.git)
     * [Blog Link](https://bingdul.github.io/project/2021/08/29/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_3%EC%B0%A8_%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%ED%91%B8%EC%8B%9C%EC%95%8C%EB%9E%8C%EC%84%9C%EB%B9%84%EC%8A%A4.html)
@@ -138,7 +139,7 @@ title: Résumé
   <br>
 3. **Smart 자판기**  
    * 기술 구현 : Java, Python
-   * 개발 기간 : 21.06 ~ 21.06
+   * 개발 기간 : 21.06
    * 개발 인원 : 4명
    * [Github Link](https://github.com/bingdul/Project03_Smart-vending-machine.git)
    * [Blog Link](https://bingdul.github.io/project/2021/06/25/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2%EC%B0%A8_Smart%EC%9E%90%ED%8C%90%EA%B8%B0.html)
@@ -146,7 +147,7 @@ title: Résumé
   <br>
 4. **MINI 제철소 ( MES 프로젝트 )**
    * 기술 구현 : C#, 오라클
-   * 개발 기간 : 21.05 ~ 21.05
+   * 개발 기간 : 21.05
    * 개발 인원 : 5명
    * [Github Link](https://github.com/bingdul/Project04_Mini-Ironwork-with-MES-System.git)
    * [Blog Link](https://bingdul.github.io/project/2021/05/31/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_1%EC%B0%A8_Mini%EC%A0%9C%EC%B2%A0%EC%86%8C.html)
