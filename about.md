@@ -35,6 +35,15 @@ title: Résumé
 * MySQL, MariaDB
 * IDE : IntelliJ, Eclipes, VsCode
 
+## 4. 핵심경험
+
+---
+
+* Springboot를 이용한 서버개발
+* Android Studio를 이용한 어플리케이션 개발
+* C# .net 프레임워크,winform을 이용한 ui 개발 및 서버 개발
+* C++기반 unity를 이용한 VR게임 개발
+
 ## 4. 자격증
 
 ---
@@ -130,7 +139,7 @@ title: Résumé
    <br>
    <br>
 2. **android push alarm service**
-    * 기술 구현 : Java
+    * 기술 구현 : Java , Springboot,  google firebase , Android Studio, html/css/Js
     * 개발 기간 : 21.08
     * 개발 인원 : 5명
     * [Github Link](https://github.com/bingdul/Project02_android-push-alarm-service.git)
