@@ -10,6 +10,9 @@ title: Résumé
 
 ---
 
+<b><img src="/assets/images/banners/bingdul.jpg" width="150"></b>
+ 
+
 * name : 이동희 / Donghui Lee
 * Email : hhhh7611@naver.com  / leedh2929@gmail.com
 * phone : 010-5915-2929
