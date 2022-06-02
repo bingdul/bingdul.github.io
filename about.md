@@ -42,7 +42,7 @@ title: Résumé
 * Springboot를 이용한 서버개발
 * Android Studio를 이용한 어플리케이션 개발
 * C# .net 프레임워크,winform을 이용한 ui 개발 및 서버 개발
-* C++기반 unity를 이용한 VR게임 개발
+* C# 기반 unity를 이용한 VR게임 개발
 
 ## 4. 자격증
 
